@@ -1,0 +1,118 @@
+{
+  "projectType": "api-service",
+  "projectName": "Trendora Backend",
+  "projectDescription": "E-commerce REST API for clothing store with JWT authentication, role-based access control, product management, and real-time messaging",
+  "theme": "palm",
+  "primaryColor": "#6366f1",
+  "lightColor": "#818cf8",
+  "darkColor": "#4f46e5",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "authentication/jwt",
+              "authentication/roles",
+              "authentication/guards"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/products",
+              "guides/file-uploads",
+              "guides/websockets",
+              "guides/database-seeding"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/environment",
+              "deployment/production"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/register",
+              "api/auth/login",
+              "api/auth/check-status"
+            ]
+          },
+          {
+            "group": "Products",
+            "pages": [
+              "api/products/list",
+              "api/products/get",
+              "api/products/create",
+              "api/products/update",
+              "api/products/delete"
+            ]
+          },
+          {
+            "group": "Files",
+            "pages": [
+              "api/files/upload",
+              "api/files/get"
+            ]
+          },
+          {
+            "group": "Database",
+            "pages": [
+              "api/seed/execute"
+            ]
+          },
+          {
+            "group": "WebSocket",
+            "pages": [
+              "api/websocket/connection",
+              "api/websocket/messages"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "JWT authentication and authorization",
+    "Role-based access control (user, admin, super-user)",
+    "Product CRUD operations with pagination",
+    "File upload and management for product images",
+    "Real-time messaging via WebSockets",
+    "Database seeding for initial data",
+    "Swagger API documentation",
+    "Docker containerization support"
+  ],
+  "publicApiSurface": [
+    "POST /api/auth/register - User registration",
+    "POST /api/auth/login - User login",
+    "GET /api/auth/check-status - Check authentication status",
+    "GET /api/products - List products with pagination",
+    "GET /api/products/:term - Get product by ID or slug",
+    "POST /api/products - Create product (auth required)",
+    "PATCH /api/products/:id - Update product (admin only)",
+    "DELETE /api/products/:id - Delete product (admin only)",
+    "POST /api/files/product - Upload product image",
+    "GET /api/files/product/:imageName - Get product image",
+    "GET /api/seed - Reset and seed database",
+    "WebSocket Gateway - Real-time messaging with JWT authentication"
+  ]
+}
